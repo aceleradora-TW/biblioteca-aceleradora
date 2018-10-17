@@ -37,13 +37,9 @@ repositories {
 
 flyway {
 
-    def host = System.getenv("ESQUELETO_DB_HOST") ?: 'localhost'
-    def port = System.getenv("ESQUELETO_DB_PORT") ?: 5432
-    def name = System.getenv("ESQUELETO_DB_NAME") ?: 'esqueleto'
-
-    url = "jdbc:postgresql://$host:$port/$name"
-    user = System.getenv("ESQUELETO_DB_USER") ?: 'postgres'
-    password = System.getenv("ESQUELETO_DB_PASSWORD") ?: 'esqueleto'
+    url = System.getenv("SPRING_DATASOURCE_URL") ?: 'jdbc:postgresql://localhost:5432/banquinho'
+    user = System.getenv("SPRING_DATASOURCE_USERNAME") ?: 'postgres'
+    password = System.getenv("SPRING_DATASOURCE_PASSWORD") ?: 'senha'
 }
 
 bootRun {
