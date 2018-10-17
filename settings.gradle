@@ -1,0 +1,4 @@
+rootProject.name = 'biblioteca-aceleradora'
+
+include 'app'
+

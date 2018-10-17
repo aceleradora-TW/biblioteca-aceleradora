@@ -1,0 +1,8 @@
+server:
+  port: ${PORT:8080}
+
+# Como configurar um banco de dados com Spring
+# https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-sql.html
+
+# Como configurar um banco de dados no Heroku
+# https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-spring_datasource_url-in-a-spring-boot-app
