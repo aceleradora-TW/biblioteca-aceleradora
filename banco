@@ -1,14 +1,14 @@
 case $1 in
   run)
-    docker run --rm --name esqueleto-db -p 5432:5432 -e POSTGRES_PASSWORD=esqueleto -d postgres
+    docker run --rm --name biblioteca-db -p 5432:5432 -e POSTGRES_PASSWORD=senha -d postgres
   ;;
 
   create)
-    docker exec -it esqueleto-db psql -U postgres -c 'CREATE DATABASE esqueleto'
+    docker exec -it biblioteca-db psql -U postgres -c 'CREATE DATABASE banquinho'
   ;;
 
   console)
-    docker exec -it esqueleto-db psql -U postgres -d esqueleto
+    docker exec -it biblioteca-db psql -U postgres -d banquinho
   ;;
 
   *)
