@@ -1,5 +1,6 @@
 package com.thoughtworks.aceleradora.biblioteca;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,8 +16,12 @@ public class Livro {
 
     private String titulo;
 
-    public Livro(String titulo) {
+    @Column(name = "numero_paginas")
+    private int numeroPaginas;
+
+    public Livro(String titulo, int numeroPaginas) {
         this.titulo = titulo;
+        this.numeroPaginas = numeroPaginas;
     }
 
     public String getTitulo() {
@@ -27,10 +32,20 @@ public class Livro {
         this.titulo = titulo;
     }
 
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }
+
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+
     @Override
     public String toString() {
         return "Livro{" +
-                "titulo='" + titulo + '\'' +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", numeroPaginas=" + numeroPaginas +
                 '}';
     }
 }

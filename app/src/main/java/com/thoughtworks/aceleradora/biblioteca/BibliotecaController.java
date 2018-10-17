@@ -21,7 +21,7 @@ public class BibliotecaController {
     @GetMapping("/cria")
     @ResponseBody
     public String criaLivro() {
-        Livro livro = new Livro("Livro " + Math.random());
+        Livro livro = new Livro("Livro " + Math.random(), 100);
 
         repository.save(livro);
 
@@ -32,10 +32,10 @@ public class BibliotecaController {
     public String listaDeLivros(Model model) {
 
         List<Livro> livros = asList(
-                new Livro("1984"),
-                new Livro("Admiravel mundo novo"),
-                new Livro("Fahrenheit 451"),
-                new Livro("Maus")
+                new Livro("1984", 100),
+                new Livro("Admiravel mundo novo", 200),
+                new Livro("Fahrenheit 451", 300),
+                new Livro("Maus", 400)
         );
 
         model.addAttribute("xablau", livros);

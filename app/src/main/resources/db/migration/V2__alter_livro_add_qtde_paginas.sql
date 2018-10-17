@@ -1,0 +1,1 @@
+ALTER TABLE livro ADD COLUMN numero_paginas INTEGER;

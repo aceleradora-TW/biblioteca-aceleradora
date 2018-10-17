@@ -18,6 +18,10 @@
             <div class="column is-3" th:each="livro : ${xablau}">
                 <div class="box div-do-matheus">
                     <h1 class="subtitle" th:text="${livro.titulo}"></h1>
+                    <div>
+                        <span th:text="${livro.numeroPaginas}"></span>
+                        <span>Páginas</span>
+                    </div>
                 </div>
 
             </div>
