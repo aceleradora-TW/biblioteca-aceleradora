@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Lista de Livros</title>
@@ -15,30 +15,11 @@
 
         <div class="columns is-multiline">
 
-            <div class="column is-3">
+            <div class="column is-3" th:each="livro : ${livros}">
                 <div class="box">
-                    <h1 class="subtitle">1984</h1>
+                    <h1 class="subtitle" th:text="${livro.titulo}"></h1>
                 </div>
             </div>
-
-            <div class="column is-3">
-                <div class="box">
-                    <h1 class="subtitle">Admirável mundo novo</h1>
-                </div>
-            </div>
-
-            <div class="column is-3">
-                <div class="box">
-                    <h1 class="subtitle">Fahrenheit 451</h1>
-                </div>
-            </div>
-
-            <div class="column is-3">
-                <div class="box">
-                    <h1 class="subtitle">Maus</h1>
-                </div>
-            </div>
-
         </div>
     </div>
 
